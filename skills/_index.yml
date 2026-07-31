@@ -1,0 +1,11 @@
+generated: '2026-07-20'
+method: generated
+source: https://www.onepot.ai/api
+skills:
+- file: onepot-search-and-order.md
+  name: Search and order make-on-demand molecules with onepot
+  api: https://www.onepot.ai/api
+  operations:
+  - search
+  - search_stream
+  - order

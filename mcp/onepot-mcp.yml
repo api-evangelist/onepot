@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://www.onepot.ai/api
+note: >-
+  No official hosted/remote MCP server was found for onepot (searched docs and
+  MCP registries). This is a CANDIDATE tool list derived from the documented
+  onepot Python client operations, showing what an MCP server wrapping the
+  onepot API could expose. Not an authoritative provider claim.
+server:
+  name: onepot
+  transport: http
+  url: null
+tools:
+- name: search_molecules
+  description: >-
+    Similarity (Tanimoto) and SMILES/SMARTS substructure search over the onepot
+    CORE make-on-demand compound space; optional retrosynthetic decomposition
+    with building-block, price, and route-risk filters. Returns ranked analogs
+    with similarity scores and instant prices.
+  source_operation: onepot-client#search
+  inputs:
+  - smiles_list
+  - max_results
+  - decompose
+  - max_price_usd
+  - max_risk
+- name: search_molecules_stream
+  description: >-
+    Streaming variant of molecule search; emits server-sent progress and result
+    events as the search runs, for long-running queries.
+  source_operation: onepot-client#search_stream
+  inputs:
+  - smiles
+  - max_results
+- name: order_synthesis
+  description: >-
+    Submit selected compounds (SMILES) for synthesis quoting and place an order;
+    returns a tracked order id and status.
+  source_operation: onepot-client#order
+  inputs:
+  - smiles_list
+  - email

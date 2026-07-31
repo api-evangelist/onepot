@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: https://pypi.org/project/onepot/
+packages:
+- language: python
+  registry: pypi
+  name: onepot
+  url: https://pypi.org/project/onepot/
+  install: pip install onepot
+  version: 0.2.1
+  requires_python: ">=3.11"
+  summary: Python client for the onepot API
+  official: true
+  notes: >-
+    First-party Python client wrapping the onepot REST API (similarity /
+    substructure search, retrosynthetic decomposition, SSE result streaming,
+    and synthesis ordering). Documented on https://www.onepot.ai/api. Also
+    installable with "uv add onepot".

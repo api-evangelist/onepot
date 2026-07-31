@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.onepot.ai/api
+docs: https://www.onepot.ai/api
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - client
+  oauth2_flows: []
+  access: gated
+  notes: >-
+    Access is gated behind "Request API access". The onepot Python client is
+    constructed with an API key (Client(api_key="your-api-key")); the client
+    attaches the key to the underlying REST API requests. No OAuth2/OIDC surface
+    is documented; the public discovery well-known endpoints (openid-configuration,
+    oauth-authorization-server) return 404.
+schemes:
+- name: apiKey
+  type: apiKey
+  in: client
+  description: >-
+    API key supplied to the onepot Python client constructor
+    (Client(api_key=...)) and sent to the REST API on each call. Obtained via
+    "Request API access" on the API docs page.
+  sources:
+  - https://www.onepot.ai/api

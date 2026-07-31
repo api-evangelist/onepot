@@ -1,7 +1,30 @@
 aid: onepot
 name: Onepot
-description: Onepot is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Onepot (onepot.ai) is a San Francisco-based startup building an AI-powered,
+  fully automated custom synthesis platform for small-molecule drug discovery.
+  It combines ultra-high-throughput lab automation in its POT-1 lab with an AI
+  organic chemist ("Phil") and reaction foundation models to search, quote, and
+  synthesize make-on-demand molecules end to end, aiming to replace slow,
+  error-prone CRO workflows. Onepot exposes a developer API and a Python client
+  (published on PyPI as "onepot") that lets teams run Tanimoto similarity and
+  SMILES/SMARTS substructure search over the full onepot CORE compound space,
+  perform retrosynthetic decomposition with building-block and price/risk
+  filters, stream real-time results over server-sent events, and place synthesis
+  orders programmatically from their own pipelines using an API key.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.onepot.ai/onepot_logo_color.svg
 url: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +34,79 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Chemistry
+- Cheminformatics
+- Drug Discovery
+- Small Molecule Synthesis
+- Contract Research Organization
+- Artificial Intelligence
+- Machine Learning
+- Lab Automation
+- Life Sciences
+- API
+common:
+- type: Website
+  url: https://www.onepot.ai
+- type: DeveloperPortal
+  url: https://www.onepot.ai/api
+- type: Documentation
+  url: https://www.onepot.ai/api
+- type: APIReference
+  url: https://www.onepot.ai/api
+- type: GettingStarted
+  url: https://www.onepot.ai/api
+- type: Blog
+  url: https://www.onepot.ai/blog
+- type: Research
+  url: https://www.onepot.ai/research
+- type: Packages
+  url: packages/onepot-packages.yml
+- type: SDKs
+  url: packages/onepot-packages.yml
+- type: Authentication
+  url: authentication/onepot-authentication.yml
+- type: Conventions
+  url: conventions/onepot-conventions.yml
+- type: MCPServer
+  url: mcp/onepot-mcp.yml
+- type: LLMsTxt
+  url: llms/onepot-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/onepot-domain-security.yml
+apis:
+- name: Onepot API
+  description: >-
+    Programmatic access to onepot CORE for make-on-demand molecule discovery and
+    synthesis. Run similarity (Tanimoto) and substructure (SMILES/SMARTS) search,
+    optional retrosynthetic decomposition with building-block/price/risk filters,
+    stream progress and results over server-sent events, and place synthesis
+    orders. Accessed via the first-party Python client (pip install onepot) using
+    an API key; access is gated ("Request API access").
+  humanURL: https://www.onepot.ai/api
+  baseURL: https://www.onepot.ai
+  tags:
+  - Chemistry
+  - Cheminformatics
+  - Molecule Search
+  - Retrosynthesis
+  - Synthesis
+  properties:
+  - type: Documentation
+    url: https://www.onepot.ai/api
+  - type: GettingStarted
+    url: https://www.onepot.ai/api
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

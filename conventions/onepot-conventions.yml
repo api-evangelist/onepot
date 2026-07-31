@@ -1,0 +1,55 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.onepot.ai/api
+summary: >-
+  Cross-cutting request/response semantics for the onepot API, captured from the
+  published API docs and Python client examples. The API is a REST service
+  accessed primarily through the first-party onepot Python client; domain inputs
+  are SMILES strings and searches return ranked make-on-demand analogs.
+authentication:
+  style: api-key
+  detail: Client(api_key="...") — see authentication/onepot-authentication.yml
+transport:
+  protocol: REST over HTTPS
+  client: onepot Python client (pip install onepot), Python 3.11+
+streaming:
+  supported: true
+  mechanism: server-sent-events
+  detail: >-
+    client.search_stream(...) yields real-time events as the search runs. Events
+    carry a "type" of "progress" (fields: stage, pct) or "result" (field:
+    compound). Used for long-running similarity/retrosynthesis queries.
+pagination:
+  style: result-limit
+  params:
+  - max_results
+  detail: >-
+    Searches are bounded by max_results rather than page cursors; results come
+    back ranked by similarity. No cursor/offset pagination is documented.
+domain_parameters:
+  input: SMILES strings (smiles / smiles_list)
+  filters:
+  - decompose (bool) — enable retrosynthetic decomposition
+  - max_price_usd — price threshold on synthesis
+  - max_risk — synthesis route risk cap
+  - max_results — number of ranked analogs to return
+response_envelope:
+  search:
+    shape: '{ "queries": [ { "results": [ ... ] } ] }'
+    result_fields:
+    - smiles
+    - similarity
+    - price_usd
+    - building_blocks
+  order:
+    shape: '{ "id": "...", "status": "..." }'
+idempotency:
+  supported: false
+  notes: No idempotency-key mechanism is documented.
+rate_limits:
+  documented: false
+error_envelope:
+  documented: false
+cross_links:
+  authentication: authentication/onepot-authentication.yml
+  packages: packages/onepot-packages.yml
