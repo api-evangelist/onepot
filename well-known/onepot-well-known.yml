@@ -1,18 +1,23 @@
 generated: '2026-07-20'
 method: searched
 host: https://www.onepot.ai
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-note: >-
-  Probed 2026-07-20. No .well-known discovery documents are currently published
-  on www.onepot.ai (all 404). Also absent: /llms.txt (404), status subdomain
-  (status.onepot.ai does not resolve).
+note: 'Probed 2026-07-20. No .well-known discovery documents are currently published on www.onepot.ai
+  (all 404). Also absent: /llms.txt (404), status subdomain (status.onepot.ai does not resolve).'
+hosts:
+- host: https://www.onepot.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
