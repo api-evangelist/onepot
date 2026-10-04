@@ -55,7 +55,7 @@ tags:
 - Small Molecule Synthesis
 - Contract Research Organization
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Lab Automation
 - Life Sciences
 tags_raw:
@@ -70,6 +70,7 @@ tags_raw:
 - Lab Automation
 - Life Sciences
 - API
+- Machine-Learning
 common:
 - type: Website
   url: https://www.onepot.ai
@@ -112,7 +113,6 @@ apis:
     orders. Accessed via the first-party Python client (pip install onepot) using
     an API key; access is gated ("Request API access").
   humanURL: https://www.onepot.ai/api
-  baseURL: https://www.onepot.ai
   tags:
   - Chemistry
   - Cheminformatics
