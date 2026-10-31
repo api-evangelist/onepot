@@ -64,6 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Onepot is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Onepot (onepot.ai) is a San Francisco-based startup building an AI-powered, fully automated custom synthesis platform for small-molecule drug discovery. It combines ultra-high-throughput lab automation in its POT-1 lab with an AI organic chemist ("Phil") and reaction foundation models to search, quote, and synthesize make-on-demand molecules end to end, aiming to replace slow, error-prone CRO workflows. Onepot exposes a developer API and a Python client (published on PyPI as "onepot") that lets teams run Tanimoto similarity and SMILES/SMARTS substructure search over the full onepot CORE compound space, perform retrosynthetic decomposition with building-block and price/risk filters, stream real-time results over server-sent events, and place synthesis orders programmatically from their own pipelines using an API key.
 
-Backed by: speedinvest
+**Areas:** Company · Chemistry · Cheminformatics · Drug Discovery · Small Molecule Synthesis · Contract Research Organization · Artificial Intelligence · Machine Learning · Lab Automation · Life Sciences
+
+## Onepot on APIs.io
+
+Everything profiled for Onepot is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/onepot/](https://apis.io/providers/onepot/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Onepot API](https://apis.io/apis/onepot/onepot-api/) — Programmatic access to onepot CORE for make-on-demand molecule discovery and synthesis. Run similarity (Tanimoto) and substructure (SMILES/SMARTS) search,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [onepot](https://apis.io/servers/onepot/onepot/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Onepot Authentication](https://apis.io/security/onepot/onepot-authentication/)
+- [Onepot Domain Security](https://apis.io/security/onepot/onepot-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.onepot.ai)
+- [Documentation](https://www.onepot.ai/api)
+- [Getting started](https://www.onepot.ai/api)
+- [API reference](https://www.onepot.ai/api)
+- [Blog](https://www.onepot.ai/blog)
+
+## API Evangelist rating
+
+**Kin Score 18.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 61.3 |
+| Access clarity | 0.0 |
+
+**Agent readiness 3.4** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 8.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/onepot/](https://apis.io/providers/onepot/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Onepot: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/onepot/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
